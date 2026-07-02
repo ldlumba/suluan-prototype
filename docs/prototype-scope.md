@@ -8,6 +8,9 @@ No Supabase, Firebase, OpenAI API, external database, paid API, backend service,
 
 Full implementation, including real authentication, durable repository storage, administrative audit trails, production search, and approved AI-assisted features, may proceed only after proposal approval and institutional validation.
 
-The prototype demonstrates major user flows and intended system behavior: browsing research metadata, viewing records, simulating semantic discovery, exploring sample metadata relationships through a graph, checking descriptive analytics, submitting prototype-only metadata, switching simulated roles, and reviewing a validation queue.
+The prototype demonstrates major user flows and intended system behavior: browsing validated research metadata, viewing validated records, simulating semantic discovery over validated samples, exploring validated sample metadata relationships through a graph, checking descriptive analytics, submitting prototype-only metadata, switching simulated roles, and reviewing a validation queue.
 
 Out-of-scope capabilities include Google Scholar automation, research trend prediction, research-gap determination, originality checking, plagiarism checking, research quality scoring, academic merit judgment, predictive planning, real database submission, real document access approval, and real restricted-document access.
+
+Normal browsing, semantic discovery, Knowledge Graph exploration, and analytics use validated sample records by default. Pending Review, Needs Revision, and Rejected records are reserved for the Admin Dashboard validation workflow simulation.
+

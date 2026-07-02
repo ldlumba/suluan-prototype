@@ -3,6 +3,7 @@ import { AccessBadge, ValidationBadge } from '../components/common/Badge'
 import { Field, SelectInput } from '../components/common/FormControls'
 import { PageHeader } from '../components/common/PageHeader'
 import { SimulationNotice } from '../components/common/SimulationNotice'
+import { ValidationStatusGuide } from '../components/common/ValidationStatusGuide'
 import { researchRecords, type ValidationStatus } from '../data/researchRecords'
 import { applyStatusOverrides, getSubmittedRecords, setStatusOverride } from '../utils/localStorage'
 
@@ -22,7 +23,8 @@ export function AdminDashboardPage() {
   return (
     <div>
       <PageHeader eyebrow="Repository management" title="Admin Dashboard" description="Review fictional metadata queues and simulate validation status changes with localStorage." />
-      <SimulationNotice>Prototype simulation: validation changes are stored only in this browser and do not update any real repository or represent official UA approval.</SimulationNotice>
+      <SimulationNotice>Prototype simulation: validation changes are stored only in this browser and do not update any real repository or represent official UA approval. Pending, revision, and rejected records are intentionally limited to this workflow view.</SimulationNotice>
+      <div className="mt-5"><ValidationStatusGuide /></div>
 
       <section className="mt-5 grid gap-4 md:grid-cols-4">
         {statuses.map((status) => <div key={status} className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm"><ValidationBadge status={status} /><p className="mt-3 text-3xl font-bold text-stone-950">{counts[status]}</p></div>)}
@@ -49,4 +51,5 @@ export function AdminDashboardPage() {
     </div>
   )
 }
+
 

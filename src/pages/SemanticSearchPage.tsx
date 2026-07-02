@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react'
 import { Field, TextInput } from '../components/common/FormControls'
 import { PageHeader } from '../components/common/PageHeader'
 import { SimulationNotice } from '../components/common/SimulationNotice'
+import { ValidationStatusGuide } from '../components/common/ValidationStatusGuide'
 import { SearchResultCard } from '../components/search/SearchResultCard'
 import { semanticScenarios } from '../data/semanticScenarios'
 import { runSemanticSimulation } from '../utils/semanticSimulation'
@@ -14,7 +15,8 @@ export function SemanticSearchPage() {
   return (
     <div>
       <PageHeader eyebrow="Prototype semantic discovery" title="Simulated Semantic Search" description="Enter a topic and the prototype retrieves conceptually related sample records through predefined scenarios or fallback keyword/theme matching." />
-      <SimulationNotice><strong>Prototype simulation:</strong> semantic results are generated from a temporary sample dataset. No real AI model or external scholarly service is used.</SimulationNotice>
+      <SimulationNotice><strong>Prototype simulation:</strong> semantic results are generated from validated sample records only. No real AI model or external scholarly service is used.</SimulationNotice>
+      <div className="mt-5"><ValidationStatusGuide /></div>
 
       <section className="mt-5 rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
         <Field label="Research question or topic">
@@ -47,4 +49,5 @@ export function SemanticSearchPage() {
     </div>
   )
 }
+
 

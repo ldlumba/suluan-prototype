@@ -57,3 +57,7 @@ This audit aligns the current SULUAN static prototype with the uploaded capstone
 ## Post-Edit Implementation Summary
 
 The proposed alignment changes were applied after this audit was drafted. User-facing labels now use "Simulated Semantic Search" and "Submit / Import Metadata." Notices clarify that semantic results, role switching, validation status changes, metadata submissions, Knowledge Graph relationships, and analytics are prototype simulations based on temporary sample metadata. Sample record titles that suggested scoring or prediction were revised to use review-indicator wording.
+
+## Validation Workflow Visibility Update
+
+Normal discovery views now use validated sample records by default: Browse, Simulated Semantic Search, Knowledge Graph, Analytics, and public record detail pages. Pending Review, Needs Revision, and Rejected records are reserved for the Admin Dashboard validation workflow simulation. The UI defines validation states separately from access status so that access labels do not imply validation and validation labels do not imply real UA approval.

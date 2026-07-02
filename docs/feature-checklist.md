@@ -6,8 +6,8 @@
 - Tailwind CSS styling through the Vite plugin
 - Professional SULUAN shell with navigation and branding
 - Home, Browse, Detail, Simulated Semantic Search, Knowledge Graph, Analytics, Admin, Submit / Import Metadata, and Role Demo routes
-- Fictional sample research metadata
-- Search and filter controls
+- Fictional sample research metadata with validated records separated from validation-workflow records
+- Search and filter controls for validated normal browsing
 - Citation display and copy action
 - Recharts analytics
 - React Flow knowledge graph
@@ -15,13 +15,13 @@
 
 ## Simulated in prototype
 
-- Simulated semantic search
+- Simulated semantic search over validated sample records
 - Role-based access differences
 - Metadata validation workflow
 - Prototype-only metadata submission/import
 - Administrative queue review
-- Descriptive analytics generated from sample metadata
-- Knowledge graph generated from research metadata
+- Descriptive analytics generated from validated sample metadata by default
+- Knowledge graph generated from validated sample metadata by default
 
 ## Planned for full system implementation
 
@@ -49,3 +49,4 @@
 - Real database submission
 - Real document access approval
 - Real restricted-document access
+

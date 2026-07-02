@@ -12,11 +12,23 @@ import { applyStatusOverrides, getSubmittedRecords } from '../utils/localStorage
 export function ResearchDetailPage() {
   const { recordId } = useParams()
   const [copied, setCopied] = useState(false)
-  const records = useMemo(() => applyStatusOverrides([...getSubmittedRecords(), ...researchRecords]), [])
+  const allRecords = useMemo(() => applyStatusOverrides([...getSubmittedRecords(), ...researchRecords]), [])
+  const records = useMemo(() => allRecords.filter((item) => item.validationStatus === 'Validated'), [allRecords])
   const record = records.find((item) => item.id === recordId)
+  const nonDiscoverableRecord = allRecords.find((item) => item.id === recordId)
 
   if (!record) {
-    return <PageHeader title="Record not found" description="The selected prototype record could not be found in the temporary dataset." />
+    return (
+      <div>
+        <PageHeader title="Record not available in normal discovery" description="Normal record pages show validated sample metadata only." />
+        <SimulationNotice>
+          {nonDiscoverableRecord
+            ? 'This sample metadata is not validated for normal discovery. Pending, revision, and rejected records are available only in the Admin Dashboard validation workflow simulation.'
+            : 'The selected prototype record could not be found in the temporary dataset.'}
+        </SimulationNotice>
+        <div className="mt-6"><Link to="/browse" className="text-sm font-semibold text-emerald-700 hover:text-emerald-900">Back to validated records</Link></div>
+      </div>
+    )
   }
 
   const related = record.relatedRecordIds.map((id) => records.find((item) => item.id === id)).filter(Boolean)
@@ -30,7 +42,7 @@ export function ResearchDetailPage() {
   return (
     <div>
       <PageHeader eyebrow={record.recordType} title={record.title} description={`${record.department} / ${record.program} / ${record.year}`} />
-      <SimulationNotice>This record is fictional sample metadata. Access labels, provenance, and related studies are prototype simulations and do not grant restricted document access.</SimulationNotice>
+      <SimulationNotice>This record is validated fictional sample metadata. Access labels, provenance, and related studies are prototype simulations and do not grant restricted document access.</SimulationNotice>
 
       <section className="mt-5 grid gap-5 lg:grid-cols-[1fr_320px]">
         <article className="rounded-lg border border-stone-200 bg-white p-6 shadow-sm">
@@ -60,9 +72,9 @@ export function ResearchDetailPage() {
       </section>
 
       <section className="mt-6">
-        <div className="mb-3 flex items-center gap-2 text-lg font-bold text-stone-950"><ExternalLink className="h-5 w-5" /> Related studies</div>
+        <div className="mb-3 flex items-center gap-2 text-lg font-bold text-stone-950"><ExternalLink className="h-5 w-5" /> Related validated studies</div>
         <div className="grid gap-4 lg:grid-cols-2">{related.map((item) => <ResearchCard key={item!.id} record={item!} />)}</div>
-        {related.length === 0 ? <p className="text-sm text-stone-500">No related records are listed in the temporary metadata.</p> : null}
+        {related.length === 0 ? <p className="text-sm text-stone-500">No related validated records are listed in the temporary metadata.</p> : null}
       </section>
       <div className="mt-6"><Link to="/browse" className="text-sm font-semibold text-emerald-700 hover:text-emerald-900">Back to browse</Link></div>
     </div>
@@ -72,4 +84,3 @@ export function ResearchDetailPage() {
 function Meta({ label, value }: { label: string; value: string }) {
   return <div><dt className="text-xs font-bold uppercase tracking-wide text-stone-500">{label}</dt><dd className="mt-1 text-stone-800">{value}</dd></div>
 }
-

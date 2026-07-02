@@ -14,9 +14,10 @@ const cards = [
 ]
 
 export function HomePage() {
-  const departments = new Set(researchRecords.map((record) => record.department)).size
-  const themes = new Set(researchRecords.map((record) => record.researchTheme)).size
-  const pending = researchRecords.filter((record) => record.validationStatus === 'Pending Review').length
+  const validatedRecords = researchRecords.filter((record) => record.validationStatus === 'Validated')
+  const departments = new Set(validatedRecords.map((record) => record.department)).size
+  const themes = new Set(validatedRecords.map((record) => record.researchTheme)).size
+  const workflowRecords = researchRecords.filter((record) => record.validationStatus !== 'Validated').length
 
   return (
     <div>
@@ -31,7 +32,7 @@ export function HomePage() {
         <div className="rounded-lg border border-stone-200 bg-white p-6 shadow-sm">
           <h2 className="text-xl font-bold text-stone-950">Research discovery for proposal defense</h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-stone-600">
-            SULUAN presents the approved prototype behavior of a UA-governed research intelligence platform: centralized sample metadata, reviewable provenance, simulated semantic discovery, Knowledge Graph exploration, administrative validation simulation, and descriptive analytics.
+            SULUAN presents the approved prototype behavior of a UA-governed research intelligence platform: centralized validated sample metadata, reviewable provenance, simulated semantic discovery, Knowledge Graph exploration, administrative validation simulation, and descriptive analytics.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link to="/semantic-search" className="inline-flex items-center justify-center gap-2 rounded-md bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-800">
@@ -45,15 +46,15 @@ export function HomePage() {
           </div>
         </div>
         <SimulationNotice>
-          <strong>Prototype simulation:</strong> all records are fictional sample metadata. AI, authentication, database storage, role access, metadata submissions, and validation workflows are simulated for demonstration only.
+          <strong>Prototype simulation:</strong> normal discovery uses validated fictional sample metadata only. AI, authentication, database storage, role access, metadata submissions, and validation workflows are simulated for demonstration only.
         </SimulationNotice>
       </section>
 
       <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <StatCard label="Sample records" value={researchRecords.length} detail="Fictional metadata only" icon={BookOpen} />
+        <StatCard label="Validated discovery records" value={validatedRecords.length} detail="Fictional metadata only" icon={BookOpen} />
         <StatCard label="Departments" value={departments} detail="Prototype distribution" icon={Database} />
         <StatCard label="Research themes" value={themes} detail="Used by filters and graph" icon={Network} />
-        <StatCard label="Pending review" value={pending} detail="Queue state simulation" icon={ShieldCheck} />
+        <StatCard label="Admin workflow records" value={workflowRecords} detail="Pending, revision, or rejected samples" icon={ShieldCheck} />
       </section>
 
       <section className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -71,5 +72,7 @@ export function HomePage() {
     </div>
   )
 }
+
+
 
 
