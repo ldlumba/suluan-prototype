@@ -58,7 +58,7 @@ export function SubmitRecordPage() {
         <div className="grid gap-4 md:grid-cols-2">
           <Field label="Title"><TextInput required value={form.title} onChange={(event) => update('title', event.target.value)} /></Field>
           <Field label="Authors, comma-separated"><TextInput required value={form.authors} onChange={(event) => update('authors', event.target.value)} /></Field>
-          <Field label="Department"><SelectInput value={form.department} onChange={(event) => update('department', event.target.value)}>{departments.map((item) => <option key={item}>{item}</option>)}</SelectInput></Field>
+          <Field label="Academic Unit"><SelectInput value={form.department} onChange={(event) => update('department', event.target.value)}>{departments.map((item) => <option key={item}>{item}</option>)}</SelectInput></Field>
           <Field label="Program"><TextInput value={form.program} onChange={(event) => update('program', event.target.value)} /></Field>
           <Field label="Year"><TextInput type="number" value={form.year} onChange={(event) => update('year', event.target.value)} /></Field>
           <Field label="Theme"><SelectInput value={form.researchTheme} onChange={(event) => update('researchTheme', event.target.value)}>{themes.map((item) => <option key={item}>{item}</option>)}</SelectInput></Field>
@@ -75,4 +75,3 @@ export function SubmitRecordPage() {
     </div>
   )
 }
-

@@ -46,11 +46,10 @@ export const graphEdges: Edge[] = graphRecords.flatMap((record) => {
     .map((relatedId) => ({ id: `${paperId}-related-${relatedId}`, source: paperId, target: `paper-${relatedId}`, label: 'related', style: { stroke: '#b88a1d', strokeDasharray: '5 5' }, markerEnd: { type: MarkerType.ArrowClosed } }))
 
   return [
-    { id: `${paperId}-department`, source: paperId, target: `department-${record.department}`, label: 'department', ...baseEdge },
+    { id: `${paperId}-department`, source: paperId, target: `department-${record.department}`, label: 'academic unit', ...baseEdge },
     { id: `${paperId}-theme`, source: paperId, target: `theme-${record.researchTheme}`, label: 'theme', ...baseEdge },
     ...authorEdges,
     ...keywordEdges,
     ...relatedEdges,
   ]
 })
-

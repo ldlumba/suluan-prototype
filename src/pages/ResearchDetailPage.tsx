@@ -63,6 +63,9 @@ export function ResearchDetailPage() {
           <h2 className="font-bold text-stone-950">Metadata</h2>
           <dl className="mt-4 space-y-3 text-sm">
             <Meta label="Authors" value={record.authors.join(', ')} />
+            <Meta label="Academic Unit" value={record.department} />
+            <Meta label="Program" value={record.program} />
+            <Meta label="Year" value={String(record.year)} />
             <Meta label="Adviser" value={record.adviser} />
             <Meta label="Theme" value={record.researchTheme} />
             <Meta label="Publication source" value={record.publicationSource} />

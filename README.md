@@ -14,7 +14,7 @@ The prototype demonstrates the approved SULUAN concept through:
 - Simulated role-based access for Student, Faculty, Repository Manager, and Admin.
 - Simulated Semantic Search using predefined scenarios and fallback matching over validated sample records.
 - Knowledge Graph exploration generated from validated sample metadata.
-- Descriptive analytics for department, year, theme, validation status, and access status using validated sample records by default.
+- Descriptive analytics for academic unit, year, theme, validation status, and access status using validated sample records by default.
 - Citation and metadata support through generated sample citations.
 - Journal metadata and verified alumni publication metadata represented only as permitted-content simulations.
 
@@ -39,5 +39,3 @@ npm run build
 - Analytics and knowledge graph views are based on fictional sample records.
 - The prototype does not determine research gaps, verify originality, evaluate research quality, predict trends, check plagiarism, or automate citation recommendations.
 - Full production implementation may be considered only after proposal approval and institutional validation.
-
-

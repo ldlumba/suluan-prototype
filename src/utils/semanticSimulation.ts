@@ -39,7 +39,7 @@ export function runSemanticSimulation(query: string): {
     explanation: 'No predefined semantic scenario matched closely, so this prototype falls back to simple keyword and theme matching across validated sample records only.',
     results: scored.map(({ record, score }) => ({
       record,
-      reason: `Matched ${score} query term${score === 1 ? '' : 's'} across title, abstract, theme, department, or keywords.`,
+      reason: `Matched ${score} query term${score === 1 ? '' : 's'} across title, abstract, theme, academic unit, or keywords.`,
     })),
   }
 }

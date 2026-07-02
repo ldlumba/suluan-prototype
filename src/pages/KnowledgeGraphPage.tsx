@@ -8,7 +8,7 @@ import { graphEdges, graphNodes } from '../data/graphData'
 export function KnowledgeGraphPage() {
   return (
     <div>
-      <PageHeader eyebrow="Relationship exploration" title="Knowledge Graph" description="Static graph generated from validated temporary sample metadata. Nodes represent papers, authors, departments, themes, keywords, and related-paper links." />
+      <PageHeader eyebrow="Relationship exploration" title="Knowledge Graph" description="Static graph generated from validated temporary sample metadata. Nodes represent papers, authors, academic units, themes, keywords, and related-paper links." />
       <SimulationNotice>The graph is generated from validated temporary sample metadata and is not connected to a live repository, live graph service, or restricted document collection.</SimulationNotice>
       <div className="mt-5"><GraphLegend /></div>
       <section className="mt-5 h-[680px] overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm">
@@ -21,7 +21,3 @@ export function KnowledgeGraphPage() {
     </div>
   )
 }
-
-
-
-
