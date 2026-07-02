@@ -1,4 +1,4 @@
-const controlClass = 'w-full rounded-lg border border-stone-300 bg-white px-3 py-2.5 text-sm text-stone-900 outline-none ring-emerald-600/20 transition placeholder:text-stone-400 focus:border-emerald-700 focus:ring-4'
+const controlClass = 'w-full rounded-lg border border-stone-300 bg-white px-3 py-2.5 text-sm text-stone-900 outline-none ring-[#063b82]/20 transition placeholder:text-stone-400 focus:border-[#063b82] focus:ring-4'
 
 export function TextInput(props: React.InputHTMLAttributes<HTMLInputElement>) {
   return <input {...props} className={`${controlClass} ${props.className ?? ''}`} />

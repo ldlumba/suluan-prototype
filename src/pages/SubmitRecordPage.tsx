@@ -69,8 +69,8 @@ export function SubmitRecordPage() {
           <Field label="Keywords, comma-separated"><TextInput value={form.keywords} onChange={(event) => update('keywords', event.target.value)} /></Field>
           <div className="md:col-span-2"><Field label="Abstract"><TextArea required rows={5} value={form.abstract} onChange={(event) => update('abstract', event.target.value)} /></Field></div>
         </div>
-        <button type="submit" className="mt-5 inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-800"><Save className="h-4 w-4" /> Save prototype metadata</button>
-        {savedId ? <p className="mt-4 rounded-md bg-emerald-50 p-3 text-sm font-semibold text-emerald-800">Saved locally as {savedId}. It will appear in Browse and Admin Dashboard on this browser only.</p> : null}
+        <button type="submit" className="mt-5 inline-flex items-center gap-2 rounded-lg bg-[#c81e2a] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#9f1520]"><Save className="h-4 w-4" /> Save prototype metadata</button>
+        {savedId ? <p className="mt-4 rounded-md bg-[#eef5ff] p-3 text-sm font-semibold text-[#063b82]">Saved locally as {savedId}. It will appear in Browse and Admin Dashboard on this browser only.</p> : null}
       </form>
     </div>
   )

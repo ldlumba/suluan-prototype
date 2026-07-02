@@ -1,9 +1,9 @@
 const items = [
-  ['Paper', '#1f6f5b'],
-  ['Author', '#28536b'],
-  ['Academic Unit', '#8a5a24'],
-  ['Theme', '#7c3f58'],
-  ['Keyword', '#4f6f2f'],
+  ['Paper', '#063b82'],
+  ['Author', '#0b5cad'],
+  ['Academic Unit', '#c81e2a'],
+  ['Theme', '#f4c430'],
+  ['Keyword', '#5b6472'],
 ]
 
 export function GraphLegend() {

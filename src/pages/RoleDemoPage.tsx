@@ -23,8 +23,8 @@ export function RoleDemoPage() {
 
       <section className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {prototypeRoles.map((item) => (
-          <button key={item} type="button" onClick={() => setRole(item)} className={`rounded-lg border p-4 text-left shadow-sm ${role === item ? 'border-emerald-600 bg-emerald-50' : 'border-stone-200 bg-white hover:border-emerald-200'}`}>
-            <div className="flex items-center justify-between gap-3"><span className="font-bold text-stone-950">{item}</span>{role === item ? <CheckCircle2 className="h-5 w-5 text-emerald-700" /> : null}</div>
+          <button key={item} type="button" onClick={() => setRole(item)} className={`rounded-lg border p-4 text-left shadow-sm ${role === item ? 'border-[#063b82] bg-[#eef5ff]' : 'border-stone-200 bg-white hover:border-[#9ebbe5]'}`}>
+            <div className="flex items-center justify-between gap-3"><span className="font-bold text-stone-950">{item}</span>{role === item ? <CheckCircle2 className="h-5 w-5 text-[#063b82]" /> : null}</div>
             <p className="mt-2 text-sm leading-6 text-stone-600">{roleDescriptions[item]}</p>
           </button>
         ))}
@@ -33,7 +33,7 @@ export function RoleDemoPage() {
       <section className="mt-6 grid gap-5 lg:grid-cols-2">
         <div className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm">
           <h2 className="font-bold text-stone-950">Available navigation</h2>
-          <div className="mt-4 flex flex-wrap gap-2">{allowed.map((item) => <Badge key={item.path} tone="green">{item.label}</Badge>)}</div>
+          <div className="mt-4 flex flex-wrap gap-2">{allowed.map((item) => <Badge key={item.path} tone="primary">{item.label}</Badge>)}</div>
         </div>
         <div className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm">
           <h2 className="font-bold text-stone-950">Hidden for selected role</h2>

@@ -1,10 +1,10 @@
 import clsx from 'clsx'
 import type { AccessStatus, ValidationStatus } from '../../data/researchRecords'
 
-type BadgeTone = 'green' | 'amber' | 'red' | 'blue' | 'gray' | 'violet'
+type BadgeTone = 'primary' | 'amber' | 'red' | 'blue' | 'gray' | 'violet'
 
 const toneClasses: Record<BadgeTone, string> = {
-  green: 'border-emerald-200 bg-emerald-50 text-emerald-800',
+  primary: 'border-[#c9d9f2] bg-[#eef5ff] text-[#063b82]',
   amber: 'border-amber-200 bg-amber-50 text-amber-800',
   red: 'border-rose-200 bg-rose-50 text-rose-800',
   blue: 'border-sky-200 bg-sky-50 text-sky-800',
@@ -17,11 +17,11 @@ export function Badge({ children, tone = 'gray' }: { children: React.ReactNode; 
 }
 
 export function AccessBadge({ status }: { status: AccessStatus }) {
-  const tone: Record<AccessStatus, BadgeTone> = { Open: 'green', 'Campus Only': 'blue', Restricted: 'red' }
+  const tone: Record<AccessStatus, BadgeTone> = { Open: 'primary', 'Campus Only': 'blue', Restricted: 'red' }
   return <Badge tone={tone[status]}>{status}</Badge>
 }
 
 export function ValidationBadge({ status }: { status: ValidationStatus }) {
-  const tone: Record<ValidationStatus, BadgeTone> = { Validated: 'green', 'Pending Review': 'amber', 'Needs Revision': 'violet', Rejected: 'red' }
+  const tone: Record<ValidationStatus, BadgeTone> = { Validated: 'primary', 'Pending Review': 'amber', 'Needs Revision': 'violet', Rejected: 'red' }
   return <Badge tone={tone[status]}>{status}</Badge>
 }

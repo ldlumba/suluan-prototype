@@ -13,14 +13,14 @@ const featureCards = [
 ]
 
 const unitAccents = [
-  { background: '#f4d600', foreground: '#111827', ring: 'rgba(255,255,255,0.78)' },
-  { background: '#ef4b26', foreground: '#ffffff', ring: 'rgba(255,255,255,0.72)' },
-  { background: '#e91469', foreground: '#ffffff', ring: 'rgba(255,255,255,0.72)' },
-  { background: '#9da29e', foreground: '#ffffff', ring: 'rgba(255,255,255,0.78)' },
-  { background: '#347d38', foreground: '#ffffff', ring: 'rgba(255,255,255,0.72)' },
+  { background: '#f4c430', foreground: '#111827', ring: 'rgba(255,255,255,0.78)' },
+  { background: '#c81e2a', foreground: '#ffffff', ring: 'rgba(255,255,255,0.72)' },
+  { background: '#062f6f', foreground: '#ffffff', ring: 'rgba(255,255,255,0.72)' },
+  { background: '#5b6472', foreground: '#ffffff', ring: 'rgba(255,255,255,0.78)' },
+  { background: '#0b5cad', foreground: '#ffffff', ring: 'rgba(255,255,255,0.72)' },
   { background: '#f7f7f4', foreground: '#062f6f', ring: 'rgba(255,255,255,0.92)' },
-  { background: '#f4d600', foreground: '#111827', ring: 'rgba(255,255,255,0.78)' },
-  { background: '#211982', foreground: '#ffffff', ring: 'rgba(255,255,255,0.72)' },
+  { background: '#f4c430', foreground: '#111827', ring: 'rgba(255,255,255,0.78)' },
+  { background: '#062f6f', foreground: '#ffffff', ring: 'rgba(255,255,255,0.72)' },
 ]
 
 export function HomePage() {
@@ -41,12 +41,12 @@ export function HomePage() {
           <div>
             <Badge tone="blue">Prototype simulation</Badge>
             <h1 className="mt-4 max-w-4xl text-3xl font-black leading-tight text-stone-950 sm:text-4xl lg:text-5xl">SULUAN</h1>
-            <p className="mt-2 text-lg font-bold text-emerald-800">AI-Assisted Institutional Research Intelligence Platform</p>
+            <p className="mt-2 text-lg font-bold text-[#063b82]">AI-Assisted Institutional Research Intelligence Platform</p>
             <p className="mt-5 max-w-3xl text-base leading-8 text-stone-600">
               A high-fidelity frontend prototype for research metadata visibility, governed discovery, provenance review, validation workflow simulation, Knowledge Graph exploration, and descriptive analytics using fictional sample records only.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Link to="/semantic-search" className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-800">
+              <Link to="/semantic-search" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c81e2a] px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#9f1520]">
                 <Brain className="h-4 w-4" aria-hidden="true" />
                 Try simulated search
               </Link>
@@ -81,19 +81,19 @@ export function HomePage() {
       <section>
         <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-emerald-700">Discovery sample</p>
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-[#063b82]">Discovery sample</p>
             <h2 className="mt-1 text-2xl font-black text-stone-950">Featured Research Records</h2>
             <p className="mt-1 text-sm leading-6 text-stone-600">Selected validated sample records for visibility and discovery demonstration, not automatic ranking, awards, or quality judgment.</p>
           </div>
-          <Link to="/browse" className="inline-flex items-center gap-2 text-sm font-bold text-emerald-700 hover:text-emerald-900">
+          <Link to="/browse" className="inline-flex items-center gap-2 text-sm font-bold text-[#063b82] hover:text-[#062f6f]">
             View all records <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
         <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
           {featuredRecords.map((record) => (
-            <Link key={record.id} to={`/records/${record.id}`} className="group rounded-xl border border-stone-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-md">
+            <Link key={record.id} to={`/records/${record.id}`} className="group rounded-xl border border-stone-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#9ebbe5] hover:shadow-md">
               <div className="mb-3 flex flex-wrap gap-2"><AccessBadge status={record.accessStatus} /><ValidationBadge status={record.validationStatus} /></div>
-              <h3 className="text-base font-black leading-6 text-stone-950 group-hover:text-emerald-800">{record.title}</h3>
+              <h3 className="text-base font-black leading-6 text-stone-950 group-hover:text-[#063b82]">{record.title}</h3>
               <p className="mt-2 text-sm font-semibold text-stone-600">{record.department}</p>
               <p className="mt-3 line-clamp-3 text-sm leading-6 text-stone-600">{record.abstract}</p>
             </Link>
@@ -103,7 +103,7 @@ export function HomePage() {
 
       <section>
         <div className="mb-4">
-          <p className="text-xs font-black uppercase tracking-[0.18em] text-emerald-700">Academic unit browsing</p>
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#063b82]">Academic unit browsing</p>
           <h2 className="mt-1 text-2xl font-black text-stone-950">Browse by School and College</h2>
           <p className="mt-1 text-sm leading-6 text-stone-600">Open the Browse Research Records page with validated sample records prefiltered by academic unit. Circular spaces are blank placeholders only.</p>
         </div>
@@ -119,7 +119,7 @@ export function HomePage() {
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="h-20 w-20 rounded-full border-2 bg-white/45 shadow-inner" style={{ borderColor: accent.ring }} aria-hidden="true" />
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-sm font-black text-emerald-700 shadow-sm">+</span>
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-sm font-black text-[#063b82] shadow-sm">+</span>
                 </div>
                 <div>
                   <h3 className="max-w-56 text-sm font-black leading-tight">{unit}</h3>
@@ -130,7 +130,7 @@ export function HomePage() {
           })}
         </div>
         <div className="mt-5">
-          <Link to="/browse" className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-800">
+          <Link to="/browse" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c81e2a] px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#9f1520]">
             View All Records <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -140,8 +140,8 @@ export function HomePage() {
         {featureCards.map((card) => {
           const Icon = card.icon
           return (
-            <Link key={card.title} to={card.href} className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-md">
-              <div className="mb-4 inline-flex rounded-lg bg-emerald-50 p-2.5 text-emerald-700 ring-1 ring-emerald-100"><Icon className="h-5 w-5" aria-hidden="true" /></div>
+            <Link key={card.title} to={card.href} className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#9ebbe5] hover:shadow-md">
+              <div className="mb-4 inline-flex rounded-lg bg-[#eef5ff] p-2.5 text-[#063b82] ring-1 ring-[#c9d9f2]"><Icon className="h-5 w-5" aria-hidden="true" /></div>
               <h3 className="font-black text-stone-950">{card.title}</h3>
               <p className="mt-2 text-sm leading-6 text-stone-600">{card.description}</p>
             </Link>

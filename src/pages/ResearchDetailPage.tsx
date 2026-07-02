@@ -26,7 +26,7 @@ export function ResearchDetailPage() {
             ? 'This sample metadata is not validated for normal discovery. Pending, revision, and rejected records are available only in the Admin Dashboard validation workflow simulation.'
             : 'The selected prototype record could not be found in the temporary dataset.'}
         </SimulationNotice>
-        <div className="mt-6"><Link to="/browse" className="text-sm font-semibold text-emerald-700 hover:text-emerald-900">Back to validated records</Link></div>
+        <div className="mt-6"><Link to="/browse" className="text-sm font-semibold text-[#063b82] hover:text-[#062f6f]">Back to validated records</Link></div>
       </div>
     )
   }
@@ -53,7 +53,7 @@ export function ResearchDetailPage() {
           <div className="mt-2 flex flex-wrap gap-2">{record.keywords.map((keyword) => <span key={keyword} className="rounded-md bg-stone-100 px-2 py-1 text-xs font-medium text-stone-700">{keyword}</span>)}</div>
           <h2 className="mt-6 text-base font-bold text-stone-950">APA citation</h2>
           <div className="mt-2 rounded-lg border border-stone-200 bg-stone-50 p-4 text-sm leading-6 text-stone-700">{record.citation.apa}</div>
-          <button type="button" onClick={handleCopy} className="mt-3 inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-800">
+          <button type="button" onClick={handleCopy} className="mt-3 inline-flex items-center gap-2 rounded-lg bg-[#c81e2a] px-3 py-2 text-sm font-semibold text-white hover:bg-[#9f1520]">
             {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
             {copied ? 'Copied' : 'Copy citation'}
           </button>
@@ -79,7 +79,7 @@ export function ResearchDetailPage() {
         <div className="grid gap-4 lg:grid-cols-2">{related.map((item) => <ResearchCard key={item!.id} record={item!} />)}</div>
         {related.length === 0 ? <p className="text-sm text-stone-500">No related validated records are listed in the temporary metadata.</p> : null}
       </section>
-      <div className="mt-6"><Link to="/browse" className="text-sm font-semibold text-emerald-700 hover:text-emerald-900">Back to browse</Link></div>
+      <div className="mt-6"><Link to="/browse" className="text-sm font-semibold text-[#063b82] hover:text-[#062f6f]">Back to browse</Link></div>
     </div>
   )
 }
