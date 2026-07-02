@@ -30,7 +30,7 @@ export function ResearchDetailPage() {
   return (
     <div>
       <PageHeader eyebrow={record.recordType} title={record.title} description={`${record.department} / ${record.program} / ${record.year}`} />
-      <SimulationNotice>This record is fictional sample metadata. Access labels, provenance, and related studies are prototype simulations.</SimulationNotice>
+      <SimulationNotice>This record is fictional sample metadata. Access labels, provenance, and related studies are prototype simulations and do not grant restricted document access.</SimulationNotice>
 
       <section className="mt-5 grid gap-5 lg:grid-cols-[1fr_320px]">
         <article className="rounded-lg border border-stone-200 bg-white p-6 shadow-sm">
@@ -72,3 +72,4 @@ export function ResearchDetailPage() {
 function Meta({ label, value }: { label: string; value: string }) {
   return <div><dt className="text-xs font-bold uppercase tracking-wide text-stone-500">{label}</dt><dd className="mt-1 text-stone-800">{value}</dd></div>
 }
+

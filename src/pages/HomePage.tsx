@@ -7,7 +7,7 @@ import { StatCard } from '../components/common/StatCard'
 import { researchRecords } from '../data/researchRecords'
 
 const cards = [
-  { title: 'Semantic Search', description: 'Prototype AI-like discovery using predefined temporary scenarios.', icon: Brain, href: '/semantic-search' },
+  { title: 'Simulated Semantic Search', description: 'Simulated semantic discovery using predefined temporary scenarios.', icon: Brain, href: '/semantic-search' },
   { title: 'Knowledge Graph', description: 'Explore paper, author, department, theme, and keyword relationships.', icon: Network, href: '/knowledge-graph' },
   { title: 'Analytics', description: 'View repository patterns from fictional sample metadata.', icon: BarChart3, href: '/analytics' },
   { title: 'Repository Management', description: 'Review validation queues and prototype-only metadata submissions.', icon: Database, href: '/admin' },
@@ -31,12 +31,12 @@ export function HomePage() {
         <div className="rounded-lg border border-stone-200 bg-white p-6 shadow-sm">
           <h2 className="text-xl font-bold text-stone-950">Research discovery for proposal defense</h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-stone-600">
-            SULUAN presents the intended behavior of an AI-assisted institutional research platform: searchable metadata, simulated semantic discovery, relationship mapping, administrative validation, and summary analytics.
+            SULUAN presents the approved prototype behavior of a UA-governed research intelligence platform: centralized sample metadata, reviewable provenance, simulated semantic discovery, Knowledge Graph exploration, administrative validation simulation, and descriptive analytics.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link to="/semantic-search" className="inline-flex items-center justify-center gap-2 rounded-md bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-800">
               <Brain className="h-4 w-4" aria-hidden="true" />
-              Try semantic search
+              Try simulated search
             </Link>
             <Link to="/browse" className="inline-flex items-center justify-center gap-2 rounded-md border border-stone-300 bg-white px-4 py-2.5 text-sm font-semibold text-stone-800 hover:bg-stone-50">
               <BookOpen className="h-4 w-4" aria-hidden="true" />
@@ -45,7 +45,7 @@ export function HomePage() {
           </div>
         </div>
         <SimulationNotice>
-          <strong>Prototype simulation:</strong> all records are fictional sample metadata. AI, authentication, database storage, role access, submissions, and validation workflows are simulated for demonstration only.
+          <strong>Prototype simulation:</strong> all records are fictional sample metadata. AI, authentication, database storage, role access, metadata submissions, and validation workflows are simulated for demonstration only.
         </SimulationNotice>
       </section>
 
@@ -71,3 +71,5 @@ export function HomePage() {
     </div>
   )
 }
+
+

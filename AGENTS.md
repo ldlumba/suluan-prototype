@@ -1,6 +1,9 @@
 # SULUAN Prototype Agent Rules
 
 - This is a high-fidelity static web prototype for SULUAN.
+- Align all changes with Chapter 1 purpose, objectives, scope, and delimitations.
+- Align development/evaluation language with Chapter 3 methodology, Agile framing, and ISO/IEC 25010-oriented evaluation framing.
+- Use the MSR / Capstone Project Manual only for capstone compliance, documentation, and defense-readiness guidance.
 - Do not add backend code.
 - Do not add Supabase, Firebase, OpenAI API, external databases, paid APIs, or real AI.
 - Use local TypeScript data files and localStorage only.
@@ -8,6 +11,12 @@
 - Use sample metadata only.
 - Do not use confidential UA records.
 - Label simulated features clearly as prototype simulations.
+- Do not add out-of-scope capabilities such as Google Scholar automation, research-gap determination, originality checking, plagiarism checking, research quality scoring, academic merit judgment, predictive research planning, or automated citation recommendation.
+- Do not imply real authentication, real database persistence, real document access approval, real restricted-document access, or official institutional approval.
+- Keep analytics descriptive; do not add prediction, quality scoring, or impact judgment.
+- Keep citation features as citation and metadata support only.
+- Keep journal and alumni publication features as permitted metadata simulations only.
+- Do not overclaim prototype simulations as production functions.
 - Keep the interface professional, academic, and suitable for proposal defense.
 - Keep code readable and organized.
 - After major edits, run `npm run build` and summarize changed files.

@@ -22,8 +22,8 @@ export function AnalyticsPage() {
 
   return (
     <div>
-      <PageHeader eyebrow="Prototype analytics" title="Analytics Dashboard" description="Charts summarize fictional sample metadata and browser-local prototype submissions." />
-      <SimulationNotice>Analytics are based on prototype sample data only. They do not represent official university repository statistics.</SimulationNotice>
+      <PageHeader eyebrow="Prototype analytics" title="Analytics Dashboard" description="Charts summarize fictional sample metadata and browser-local prototype submissions using descriptive analytics only." />
+      <SimulationNotice>Analytics are descriptive and based on prototype sample data only. They do not represent official university repository statistics or evaluations of any record.</SimulationNotice>
       <section className="mt-5 grid gap-5 xl:grid-cols-2">
         <ChartFrame title="Papers by department"><ResponsiveContainer><BarChart data={byDepartment} layout="vertical" margin={{ left: 24, right: 16 }}><CartesianGrid strokeDasharray="3 3" /><XAxis type="number" allowDecimals={false} /><YAxis type="category" dataKey="name" width={170} tick={{ fontSize: 11 }} /><Tooltip /><Bar dataKey="value" fill="#1f6f5b" radius={[0, 4, 4, 0]} /></BarChart></ResponsiveContainer></ChartFrame>
         <ChartFrame title="Papers by year"><ResponsiveContainer><LineChart data={byYear}><CartesianGrid strokeDasharray="3 3" /><XAxis dataKey="name" /><YAxis allowDecimals={false} /><Tooltip /><Line type="monotone" dataKey="value" stroke="#28536b" strokeWidth={3} dot={{ r: 4 }} /></LineChart></ResponsiveContainer></ChartFrame>
@@ -34,3 +34,5 @@ export function AnalyticsPage() {
     </div>
   )
 }
+
+

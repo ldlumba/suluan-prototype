@@ -81,3 +81,4 @@ export type SemanticResult = {
   record: ResearchRecord
   reason: string
 }
+

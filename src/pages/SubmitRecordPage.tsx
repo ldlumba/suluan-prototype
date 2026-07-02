@@ -51,7 +51,7 @@ export function SubmitRecordPage() {
 
   return (
     <div>
-      <PageHeader eyebrow="Prototype intake" title="Submit / Import Research Record" description="Create a browser-local metadata record for demonstration. This is not a real database submission." />
+      <PageHeader eyebrow="Prototype intake" title="Submit / Import Metadata" description="Create a browser-local metadata record for demonstration. This is not a real database, UA repository, or document submission." />
       <SimulationNotice>This form saves to localStorage only. It does not upload files, create a backend record, or store confidential university data.</SimulationNotice>
 
       <form onSubmit={submit} className="mt-5 rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
@@ -69,9 +69,10 @@ export function SubmitRecordPage() {
           <Field label="Keywords, comma-separated"><TextInput value={form.keywords} onChange={(event) => update('keywords', event.target.value)} /></Field>
           <div className="md:col-span-2"><Field label="Abstract"><TextArea required rows={5} value={form.abstract} onChange={(event) => update('abstract', event.target.value)} /></Field></div>
         </div>
-        <button type="submit" className="mt-5 inline-flex items-center gap-2 rounded-md bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-800"><Save className="h-4 w-4" /> Save prototype record</button>
-        {savedId ? <p className="mt-4 rounded-md bg-emerald-50 p-3 text-sm font-semibold text-emerald-800">Saved locally as {savedId}. It will appear in Browse and Admin Dashboard on this browser.</p> : null}
+        <button type="submit" className="mt-5 inline-flex items-center gap-2 rounded-md bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-800"><Save className="h-4 w-4" /> Save prototype metadata</button>
+        {savedId ? <p className="mt-4 rounded-md bg-emerald-50 p-3 text-sm font-semibold text-emerald-800">Saved locally as {savedId}. It will appear in Browse and Admin Dashboard on this browser only.</p> : null}
       </form>
     </div>
   )
 }
+

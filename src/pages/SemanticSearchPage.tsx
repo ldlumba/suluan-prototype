@@ -13,8 +13,8 @@ export function SemanticSearchPage() {
 
   return (
     <div>
-      <PageHeader eyebrow="Simulated AI discovery" title="Semantic Search" description="Enter a research need and the prototype will match predefined scenarios or fall back to keyword/theme matching." />
-      <SimulationNotice><strong>Prototype simulation:</strong> semantic results are generated from a temporary dataset.</SimulationNotice>
+      <PageHeader eyebrow="Prototype semantic discovery" title="Simulated Semantic Search" description="Enter a topic and the prototype retrieves conceptually related sample records through predefined scenarios or fallback keyword/theme matching." />
+      <SimulationNotice><strong>Prototype simulation:</strong> semantic results are generated from a temporary sample dataset. No real AI model or external scholarly service is used.</SimulationNotice>
 
       <section className="mt-5 rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
         <Field label="Research question or topic">
@@ -47,3 +47,4 @@ export function SemanticSearchPage() {
     </div>
   )
 }
+

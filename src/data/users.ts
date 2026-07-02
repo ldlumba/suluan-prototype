@@ -15,10 +15,10 @@ export const prototypeRoles: PrototypeRole[] = ['Student', 'Faculty', 'Repositor
 export const navItems: NavItem[] = [
   { label: 'Home', path: '/', icon: LayoutDashboard, roles: prototypeRoles },
   { label: 'Browse Records', path: '/browse', icon: BookOpen, roles: prototypeRoles },
-  { label: 'Semantic Search', path: '/semantic-search', icon: Brain, roles: prototypeRoles },
+  { label: 'Simulated Semantic Search', path: '/semantic-search', icon: Brain, roles: prototypeRoles },
   { label: 'Knowledge Graph', path: '/knowledge-graph', icon: Network, roles: prototypeRoles },
   { label: 'Analytics', path: '/analytics', icon: BarChart3, roles: ['Faculty', 'Repository Manager', 'Admin'] },
-  { label: 'Submit Record', path: '/submit', icon: FilePlus2, roles: ['Faculty', 'Repository Manager', 'Admin'] },
+  { label: 'Submit / Import Metadata', path: '/submit', icon: FilePlus2, roles: ['Faculty', 'Repository Manager', 'Admin'] },
   { label: 'Admin Dashboard', path: '/admin', icon: Settings2, roles: ['Repository Manager', 'Admin'] },
   { label: 'Role Demo', path: '/roles', icon: UserRoundCog, roles: prototypeRoles },
 ]
@@ -32,3 +32,4 @@ export const roleDescriptions: Record<PrototypeRole, string> = {
 
 export const defaultRole: PrototypeRole = 'Student'
 export const searchableRole = { label: 'Repository Search', path: '/browse', icon: Search, roles: prototypeRoles }
+
