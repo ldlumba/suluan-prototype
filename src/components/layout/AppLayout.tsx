@@ -37,8 +37,8 @@ export function AppLayout() {
         {menuOpen ? <Navigation items={visibleNav} role={role} mobile /> : null}
       </header>
 
-      <main className="lg:pl-72">
-        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+      <main className="flex min-h-screen flex-col lg:pl-72">
+        <div className="mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
           <div className="mb-5 flex flex-col gap-3 rounded-lg border border-stone-200 bg-white px-4 py-3 shadow-sm sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-xs font-bold uppercase tracking-wide text-emerald-700">Active prototype role</p>
@@ -51,8 +51,35 @@ export function AppLayout() {
           </div>
           <Outlet />
         </div>
+        <SiteFooter />
       </main>
     </div>
+  )
+}
+
+function SiteFooter() {
+  return (
+    <footer className="mt-auto border-t border-stone-800 bg-stone-950 text-white">
+      <div className="mx-auto grid w-full max-w-7xl gap-6 px-4 py-6 sm:px-6 md:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
+        <div>
+          <h2 className="text-lg font-black tracking-wide">SULUAN</h2>
+          <p className="mt-2 max-w-xl text-sm leading-6 text-stone-300">A static academic demonstration of a UA-governed research intelligence prototype for metadata visibility, discovery, provenance review, and descriptive analytics.</p>
+        </div>
+        <div>
+          <h3 className="text-sm font-bold uppercase tracking-wide text-stone-300">Sample contact</h3>
+          <p className="mt-2 text-sm leading-6 text-stone-300">Research Repository Help Desk<br />University of the Assumption</p>
+        </div>
+        <div>
+          <h3 className="text-sm font-bold uppercase tracking-wide text-stone-300">Prototype support</h3>
+          <p className="mt-2 text-sm leading-6 text-stone-300">suluan.prototype@example.edu<br />Office of Research Metadata Support</p>
+        </div>
+      </div>
+      <div className="border-t border-white/10">
+        <div className="mx-auto w-full max-w-7xl px-4 py-4 text-xs leading-5 text-stone-400 sm:px-6 lg:px-8">
+          Copyright 2026 SULUAN Prototype Team. This site is a sample-only academic demonstration and is not the final production system.
+        </div>
+      </div>
+    </footer>
   )
 }
 

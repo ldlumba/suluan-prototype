@@ -133,25 +133,6 @@ export function HomePage() {
         })}
       </section>
 
-      <footer className="mt-10 rounded-lg border border-stone-200 bg-stone-950 p-6 text-white shadow-sm">
-        <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
-          <div>
-            <h2 className="text-lg font-black tracking-wide">SULUAN</h2>
-            <p className="mt-2 text-sm leading-6 text-stone-300">A static academic demonstration of a UA-governed research intelligence prototype for metadata visibility, discovery, provenance review, and descriptive analytics.</p>
-          </div>
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-wide text-stone-300">Sample contact</h3>
-            <p className="mt-2 text-sm leading-6 text-stone-300">Research Repository Help Desk<br />University of the Assumption</p>
-          </div>
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-wide text-stone-300">Prototype support</h3>
-            <p className="mt-2 text-sm leading-6 text-stone-300">suluan.prototype@example.edu<br />Office of Research Metadata Support</p>
-          </div>
-        </div>
-        <div className="mt-6 border-t border-white/10 pt-4 text-xs leading-5 text-stone-400">
-          Copyright 2026 SULUAN Prototype Team. This site is a sample-only academic demonstration and is not the final production system.
-        </div>
-      </footer>
     </div>
   )
 }
