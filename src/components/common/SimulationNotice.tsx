@@ -2,8 +2,10 @@ import { FlaskConical } from 'lucide-react'
 
 export function SimulationNotice({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex gap-3 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-      <FlaskConical className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
+    <div className="flex gap-3 rounded-xl border border-amber-200 bg-amber-50/80 p-4 text-sm leading-6 text-amber-950 shadow-sm">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-800">
+        <FlaskConical className="h-4 w-4" aria-hidden="true" />
+      </div>
       <div>{children}</div>
     </div>
   )

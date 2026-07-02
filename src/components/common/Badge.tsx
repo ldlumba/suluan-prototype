@@ -13,7 +13,7 @@ const toneClasses: Record<BadgeTone, string> = {
 }
 
 export function Badge({ children, tone = 'gray' }: { children: React.ReactNode; tone?: BadgeTone }) {
-  return <span className={clsx('inline-flex items-center rounded-md border px-2 py-1 text-xs font-semibold', toneClasses[tone])}>{children}</span>
+  return <span className={clsx('inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide', toneClasses[tone])}>{children}</span>
 }
 
 export function AccessBadge({ status }: { status: AccessStatus }) {

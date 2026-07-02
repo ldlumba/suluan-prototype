@@ -38,7 +38,7 @@ export function BrowsePage() {
       </SimulationNotice>
       <div className="mt-5"><ValidationStatusGuide /></div>
 
-      <section className="mt-5 rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
+      <section className="mt-5 rounded-xl border border-stone-200 bg-white p-5 shadow-sm">
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
           <Field label="Keyword search"><TextInput value={filters.query} onChange={(event) => updateFilter('query', event.target.value)} placeholder="Search title, author, theme..." /></Field>
           <Field label="Academic Unit"><SelectInput value={filters.department} onChange={(event) => updateFilter('department', event.target.value)}><option>All</option>{departments.map((item) => <option key={item}>{item}</option>)}</SelectInput></Field>
@@ -52,6 +52,7 @@ export function BrowsePage() {
       <section className="mt-5 grid gap-4 lg:grid-cols-2">
         {filteredRecords.map((record) => <ResearchCard key={record.id} record={record} />)}
       </section>
+      {filteredRecords.length === 0 ? <p className="mt-5 rounded-xl border border-stone-200 bg-white p-5 text-sm leading-6 text-stone-600 shadow-sm">No validated sample records match the selected filters.</p> : null}
     </div>
   )
 }

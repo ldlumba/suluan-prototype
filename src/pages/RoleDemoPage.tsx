@@ -31,11 +31,11 @@ export function RoleDemoPage() {
       </section>
 
       <section className="mt-6 grid gap-5 lg:grid-cols-2">
-        <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm">
           <h2 className="font-bold text-stone-950">Available navigation</h2>
           <div className="mt-4 flex flex-wrap gap-2">{allowed.map((item) => <Badge key={item.path} tone="green">{item.label}</Badge>)}</div>
         </div>
-        <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm">
           <h2 className="font-bold text-stone-950">Hidden for selected role</h2>
           <div className="mt-4 flex flex-wrap gap-2">{locked.length ? locked.map((item) => <Badge key={item.path} tone="gray">{item.label}</Badge>) : <Badge tone="blue">All prototype areas visible</Badge>}</div>
         </div>

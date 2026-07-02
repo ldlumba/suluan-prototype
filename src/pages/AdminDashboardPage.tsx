@@ -27,13 +27,13 @@ export function AdminDashboardPage() {
       <div className="mt-5"><ValidationStatusGuide /></div>
 
       <section className="mt-5 grid gap-4 md:grid-cols-4">
-        {statuses.map((status) => <div key={status} className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm"><ValidationBadge status={status} /><p className="mt-3 text-3xl font-bold text-stone-950">{counts[status]}</p></div>)}
+        {statuses.map((status) => <div key={status} className="rounded-xl border border-stone-200 bg-white p-4 shadow-sm"><ValidationBadge status={status} /><p className="mt-3 text-3xl font-bold text-stone-950">{counts[status]}</p></div>)}
       </section>
 
       <section className="mt-6 space-y-4">
         <h2 className="text-lg font-bold text-stone-950">Validation queue</h2>
         {queue.map((record) => (
-          <article key={record.id} className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
+          <article key={record.id} className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
               <div>
                 <div className="flex flex-wrap gap-2"><AccessBadge status={record.accessStatus} /><ValidationBadge status={record.validationStatus} /></div>
@@ -51,5 +51,3 @@ export function AdminDashboardPage() {
     </div>
   )
 }
-
-

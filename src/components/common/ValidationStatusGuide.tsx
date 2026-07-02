@@ -17,11 +17,11 @@ const definitions = [
 
 export function ValidationStatusGuide() {
   return (
-    <div className="rounded-lg border border-stone-200 bg-white p-4 text-sm shadow-sm">
-      <h2 className="font-bold text-stone-950">Validation status guide</h2>
+    <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm shadow-sm">
+      <h2 className="font-black text-stone-950">Validation status guide</h2>
       <div className="mt-3 grid gap-3 lg:grid-cols-3">
         {definitions.map((item) => (
-          <div key={item.status} className="rounded-md border border-stone-100 bg-stone-50 p-3">
+          <div key={item.status} className="rounded-lg border border-stone-100 bg-stone-50/80 p-3">
             <ValidationBadge status={item.status} />
             <p className="mt-2 leading-6 text-stone-600">{item.meaning}</p>
           </div>

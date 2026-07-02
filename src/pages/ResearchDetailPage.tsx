@@ -45,7 +45,7 @@ export function ResearchDetailPage() {
       <SimulationNotice>This record is validated fictional sample metadata. Access labels, provenance, and related studies are prototype simulations and do not grant restricted document access.</SimulationNotice>
 
       <section className="mt-5 grid gap-5 lg:grid-cols-[1fr_320px]">
-        <article className="rounded-lg border border-stone-200 bg-white p-6 shadow-sm">
+        <article className="rounded-xl border border-stone-200 bg-white p-6 shadow-sm">
           <div className="flex flex-wrap gap-2"><AccessBadge status={record.accessStatus} /><ValidationBadge status={record.validationStatus} /></div>
           <h2 className="mt-6 text-base font-bold text-stone-950">Abstract</h2>
           <p className="mt-2 text-sm leading-7 text-stone-700">{record.abstract}</p>
@@ -53,13 +53,13 @@ export function ResearchDetailPage() {
           <div className="mt-2 flex flex-wrap gap-2">{record.keywords.map((keyword) => <span key={keyword} className="rounded-md bg-stone-100 px-2 py-1 text-xs font-medium text-stone-700">{keyword}</span>)}</div>
           <h2 className="mt-6 text-base font-bold text-stone-950">APA citation</h2>
           <div className="mt-2 rounded-lg border border-stone-200 bg-stone-50 p-4 text-sm leading-6 text-stone-700">{record.citation.apa}</div>
-          <button type="button" onClick={handleCopy} className="mt-3 inline-flex items-center gap-2 rounded-md bg-emerald-700 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-800">
+          <button type="button" onClick={handleCopy} className="mt-3 inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-800">
             {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
             {copied ? 'Copied' : 'Copy citation'}
           </button>
         </article>
 
-        <aside className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
+        <aside className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm">
           <h2 className="font-bold text-stone-950">Metadata</h2>
           <dl className="mt-4 space-y-3 text-sm">
             <Meta label="Authors" value={record.authors.join(', ')} />

@@ -11,7 +11,7 @@ export function KnowledgeGraphPage() {
       <PageHeader eyebrow="Relationship exploration" title="Knowledge Graph" description="Static graph generated from validated temporary sample metadata. Nodes represent papers, authors, academic units, themes, keywords, and related-paper links." />
       <SimulationNotice>The graph is generated from validated temporary sample metadata and is not connected to a live repository, live graph service, or restricted document collection.</SimulationNotice>
       <div className="mt-5"><GraphLegend /></div>
-      <section className="mt-5 h-[680px] overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm">
+      <section className="mt-5 h-[680px] overflow-hidden rounded-xl border border-stone-200 bg-white shadow-sm">
         <ReactFlow nodes={graphNodes} edges={graphEdges} fitView minZoom={0.15} maxZoom={1.5}>
           <Background />
           <MiniMap pannable zoomable />

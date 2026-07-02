@@ -28,3 +28,8 @@ textarea {
 .react-flow__attribution {
   display: none;
 }
+
+::selection {
+  background: #d9f0e7;
+  color: #12372a;
+}
