@@ -2,7 +2,7 @@ import { MarkerType, type Edge, type Node } from '@xyflow/react'
 import { researchRecords } from './researchRecords'
 
 const graphRecords = researchRecords.filter((record) => record.validationStatus === 'Validated').slice(0, 14)
-const palette = { paper: '#063b82', author: '#0b5cad', department: '#c81e2a', theme: '#f4c430', keyword: '#5b6472' }
+const palette = { paper: '#0038A8', author: '#1E63B5', department: '#CE1126', theme: '#FFD100', keyword: '#5b6472' }
 
 function dataNode(id: string, label: string, type: keyof typeof palette, x: number, y: number): Node {
   return {

@@ -38,7 +38,7 @@ export function AppLayout() {
       </header>
 
       <main className="flex min-h-screen flex-col lg:pl-80">
-        <div className="border-b border-stone-200 bg-[#062f6f] px-4 py-2 text-xs font-semibold text-white sm:px-6 lg:px-8">
+        <div className="border-b border-stone-200 bg-[#002D72] px-4 py-2 text-xs font-semibold text-white sm:px-6 lg:px-8">
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
             <span>University of the Assumption research intelligence prototype</span>
             <span className="text-white/75">Static frontend demo / sample metadata only</span>
@@ -47,10 +47,10 @@ export function AppLayout() {
         <div className="mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
           <div className="mb-5 flex flex-col gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3 shadow-sm sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#063b82]">Active prototype role</p>
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#0038A8]">Active prototype role</p>
               <p className="text-sm leading-6 text-stone-600">{roleDescriptions[role]}</p>
             </div>
-            <Link to="/semantic-search" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c81e2a] px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-[#9f1520]">
+            <Link to="/semantic-search" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#0038A8] px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-[#002D72]">
               <Search className="h-4 w-4" aria-hidden="true" />
               Search repository
             </Link>
@@ -113,7 +113,7 @@ function Navigation({ items, role, mobile = false }: { items: typeof navItems; r
             className={({ isActive }) =>
               clsx(
                 'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-bold transition',
-                isActive ? 'bg-[#c81e2a] text-white shadow-sm' : 'text-stone-700 hover:bg-stone-100 hover:text-stone-950',
+                isActive ? 'bg-[#0038A8] text-white shadow-sm' : 'text-stone-700 hover:bg-stone-100 hover:text-stone-950',
               )
             }
           >
@@ -122,7 +122,7 @@ function Navigation({ items, role, mobile = false }: { items: typeof navItems; r
           </NavLink>
         )
       })}
-      <div className="mt-5 rounded-xl border border-[#c9d9f2] bg-[#eef5ff] p-3 text-xs leading-5 text-[#062f6f]">
+      <div className="mt-5 rounded-xl border border-[#c7d8f5] bg-[#edf4ff] p-3 text-xs leading-5 text-[#002D72]">
         Navigation shown for <span className="font-black">{role}</span>. Role access is simulated with localStorage only.
       </div>
     </nav>

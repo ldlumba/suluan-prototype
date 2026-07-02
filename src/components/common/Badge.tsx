@@ -4,7 +4,7 @@ import type { AccessStatus, ValidationStatus } from '../../data/researchRecords'
 type BadgeTone = 'primary' | 'amber' | 'red' | 'blue' | 'gray' | 'violet'
 
 const toneClasses: Record<BadgeTone, string> = {
-  primary: 'border-[#c9d9f2] bg-[#eef5ff] text-[#063b82]',
+  primary: 'border-[#c7d8f5] bg-[#edf4ff] text-[#0038A8]',
   amber: 'border-amber-200 bg-amber-50 text-amber-800',
   red: 'border-rose-200 bg-rose-50 text-rose-800',
   blue: 'border-sky-200 bg-sky-50 text-sky-800',

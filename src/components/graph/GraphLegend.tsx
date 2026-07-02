@@ -1,8 +1,8 @@
 const items = [
-  ['Paper', '#063b82'],
-  ['Author', '#0b5cad'],
-  ['Academic Unit', '#c81e2a'],
-  ['Theme', '#f4c430'],
+  ['Paper', '#0038A8'],
+  ['Author', '#1E63B5'],
+  ['Academic Unit', '#CE1126'],
+  ['Theme', '#FFD100'],
   ['Keyword', '#5b6472'],
 ]
 

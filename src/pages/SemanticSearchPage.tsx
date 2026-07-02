@@ -22,14 +22,14 @@ export function SemanticSearchPage() {
         <Field label="Research question or topic">
           <div className="flex flex-col gap-3 sm:flex-row">
             <TextInput value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try: campus service queue, student well-being, disaster preparedness" />
-            <button type="button" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c81e2a] px-4 py-2 text-sm font-semibold text-white">
+            <button type="button" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#0038A8] px-4 py-2 text-sm font-semibold text-white">
               <Search className="h-4 w-4" aria-hidden="true" /> Simulate
             </button>
           </div>
         </Field>
         <div className="mt-4 flex flex-wrap gap-2">
           {semanticScenarios.map((scenario) => (
-            <button key={scenario.id} type="button" onClick={() => setQuery(scenario.triggers[0])} className="rounded-lg border border-stone-200 px-3 py-1.5 text-xs font-semibold text-stone-700 hover:border-[#9ebbe5] hover:bg-[#eef5ff]">
+            <button key={scenario.id} type="button" onClick={() => setQuery(scenario.triggers[0])} className="rounded-lg border border-stone-200 px-3 py-1.5 text-xs font-semibold text-stone-700 hover:border-[#9bb9ee] hover:bg-[#edf4ff]">
               {scenario.label}
             </button>
           ))}
@@ -38,7 +38,7 @@ export function SemanticSearchPage() {
 
       <section className="mt-5">
         <div className="mb-4 rounded-xl border border-stone-200 bg-white p-4 shadow-sm">
-          <div className="flex items-center gap-2 text-sm font-bold text-[#063b82]"><Brain className="h-4 w-4" /> {simulation.title}</div>
+          <div className="flex items-center gap-2 text-sm font-bold text-[#0038A8]"><Brain className="h-4 w-4" /> {simulation.title}</div>
           <p className="mt-2 text-sm leading-6 text-stone-600">{simulation.explanation}</p>
         </div>
         <div className="space-y-4">
