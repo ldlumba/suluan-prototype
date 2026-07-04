@@ -12,6 +12,7 @@ The prototype demonstrates the approved SULUAN concept through:
 - Metadata and provenance management displays.
 - Administrative validation simulation using localStorage.
 - Simulated role-based access for Student, Faculty, Repository Manager, and Admin.
+- Prototype-only Login and Create Account interface flows using harmless localStorage session/request data only.
 - Simulated Semantic Search using predefined scenarios and fallback matching over validated sample records.
 - Knowledge Graph exploration generated from validated sample metadata.
 - Descriptive analytics for academic unit, year, theme, validation status, and access status using validated sample records by default.
@@ -35,7 +36,8 @@ npm run build
 
 - AI, database, authentication, backend services, document access approval, and external integrations are simulated or absent.
 - Semantic search is simulated with predefined scenarios and temporary sample metadata.
-- Role switching, validation status changes, and submitted metadata are stored in localStorage only.
+- Login, Create Account, role switching, validation status changes, and submitted metadata are prototype simulations stored in localStorage only.
+- Login does not authenticate users, and Create Account does not create real accounts or store passwords.
 - Analytics and knowledge graph views are based on fictional sample records.
 - The prototype does not determine research gaps, verify originality, evaluate research quality, predict trends, check plagiarism, or automate citation recommendations.
 - Full production implementation may be considered only after proposal approval and institutional validation.
